@@ -4,7 +4,13 @@ recursiva.*/
 
 public class Potencia {
 
-// Implementacion recursiva de la funcion potencia
+/* Implementacion recursiva de la funcion potencia:
+    Parametros:
+        a: int no negativo que es la base de la potencia
+        b: int no negativo que es el exponente de la potencia
+    Retorna:
+        El resultado de multiplicar a, b veces
+*/
 public static int potenciarRecursivo(int a, int b) {
     // Se asume que a y b son numeros no negativos.
 
@@ -25,7 +31,13 @@ public static int potenciarRecursivo(int a, int b) {
     }
 }
 
-// Implementacion iterativa de la funcion potencia
+/* Implementacion recursiva de la funcion potencia:
+    Parametros:
+        a: int no negativo que es la base de la potencia
+        b: int no negativo que es el exponente de la potencia
+    Retorna:
+        acc: int que es el resultado de multiplicar a, b veces
+*/
 public static int potenciarIterativo(int a, int b) {
     // Se asume que a y b son numeros no negativos.
 
