@@ -48,7 +48,7 @@ print(vecB == vecC + 2)
 
 ## Ejecutando la testunit
 En el directorio `Resultados Units tests`, en el archivo `index.html` se encuentran 
-los resultados de las pruebas ejecutadas. Sin embargo, puede ejecutar las pruebas descargando `pytest`
+los resultados de las pruebas ejecutadas. Puede ejecutar las pruebas descargando `pytest`
 con el comando:
 `pip install pytest`
 
