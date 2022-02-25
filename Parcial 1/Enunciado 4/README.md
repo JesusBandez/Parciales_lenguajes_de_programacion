@@ -9,7 +9,7 @@ de su [página web](https://www.python.org/downloads/)
 
 
 Los vectores están implementados como una clase llamada `Vector3D`. 
-Esta clase se encuentra en el módulo `Vectores3D`.
+Esta clase se encuentra en el módulo `Vectores3D.py`.
 
 Para empezar a usar los vectores, primero debe descargar el módulo
 `Vectores3D` y colocarlo en el directorio donde se encuentre su programa.
@@ -17,7 +17,7 @@ Para empezar a usar los vectores, primero debe descargar el módulo
 Luego, debe importar el módulo con `import Vectores3D` e instanciar la clase `Vector3D`
 
 Vectores3D permite distintas operaciones con vectores de 3 dimensiones usando los
-operadores '+' '-' '*' '%'. Por ejemplo: basta con tener dos instancias de la clase y usar el
+operadores '+' '-' '*' '%'. Basta con tener dos instancias de la clase y usar el
 el operador '+' para obtener la suma de dos vectores. El siguiente código sirve como ejemplo:
 
 ```
