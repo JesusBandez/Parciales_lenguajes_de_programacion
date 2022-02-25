@@ -17,4 +17,4 @@ Luego, los compila ejecutando:
 javac Potencia.java
 javac ProductoMatriz.class
 ```
-y finalmente los ejecuta con el comando `java`
+y finalmente los ejecuta con el comando `java` como se mostró anteriormente
