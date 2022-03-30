@@ -1,5 +1,6 @@
 """Clase que implementa la Virtual Machine encargada de hacer las traducciones 
     y evaluaciones"""
+
 import math
 import ply.lex as lex
 import src.tokenrules
@@ -33,6 +34,10 @@ class VM(object):
         elif orden == "POST":
             ast = self.postfix_parser.parse(expr, lexer=self.lexer)
         
+        else:
+            return '''No ha definido el argumento <ord> (PRE|POST) con el orden
+             de la expresion'''
+
         if ast:
             return f'{ast.eval()}'
 
@@ -53,6 +58,9 @@ class VM(object):
             ast = self.prefix_parser.parse(expr, lexer=self.lexer)
         elif orden == "POST":
             ast = self.postfix_parser.parse(expr, lexer=self.lexer)
+        else:
+            return '''No ha definido el argumento <ord> (PRE|POST) con el orden
+             de la expresion'''
         
         if ast:
             return f'{ast}'

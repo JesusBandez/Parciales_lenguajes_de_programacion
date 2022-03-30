@@ -38,16 +38,16 @@ test_sol = [
     [simulate_token('TkNumber', 2)]
 ]
 
-test_cases.append('2+2')
+test_cases.append('2 + 2')
 test_sol.append([simulate_token('TkNumber', 2), simulate_token('TkPlus'), simulate_token('TkNumber', 2)])
 
-test_cases.append('2*2')
+test_cases.append('2 * 2')
 test_sol.append([simulate_token('TkNumber', 2), simulate_token('TkMult'), simulate_token('TkNumber', 2)])
 
-test_cases.append('2/2')
+test_cases.append('2 / 2')
 test_sol.append([simulate_token('TkNumber', 2), simulate_token('TkDiv'), simulate_token('TkNumber', 2)])
 
-test_cases.append('2-2')
+test_cases.append('2 - 2')
 test_sol.append([simulate_token('TkNumber', 2), simulate_token('TkMinus'), simulate_token('TkNumber', 2)])
 
 test_cases.append('@')
@@ -56,7 +56,7 @@ test_sol.append(['IllegalCharacter'])
 
 cases = list(zip(test_cases, test_sol))
 @pytest.mark.parametrize("test_case,test_sol", cases)
-def test_failed(test_case:str, test_sol:object, capsys):
+def test_lexer(test_case:str, test_sol:object, capsys):
     tokens = vm.test_tokenizer(test_case)
     tokens_str = list(map(lambda x: x.__str__(), tokens))
     

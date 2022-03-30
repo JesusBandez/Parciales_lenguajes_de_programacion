@@ -74,13 +74,7 @@ class Client(object):
     def salir(self):
         """Metodo para salir del cliente"""
         print('Hasta luego!')
-        exit()
- 
-
-
-    
-
-
+        exit() 
 
 if __name__== "__main__":
     client = Client()

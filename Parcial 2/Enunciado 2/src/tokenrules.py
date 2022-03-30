@@ -16,7 +16,7 @@ t_TkMult = r'\*'
 t_TkDiv = r'/'
 t_TkPlus = r'\+'
 t_TkMinus = r'-'
-t_TkNumber = r'\d'
+t_TkNumber = r'[+-]?\d+'
 
 # Maneja caracteres ilegales
 def t_error(t: LexToken):
