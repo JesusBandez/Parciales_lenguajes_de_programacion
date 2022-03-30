@@ -1,0 +1,22 @@
+Definicion de las gramaticas:
+
+Prefija:
+
+<Expresion> -> + <Expresion> <Expresion>
+    | - <Expresion> <Expresion>
+    | * <Expresion> <Expresion>
+    | / <Expresion> <Expresion>
+    | <Numero>
+
+<Numero> -> regex(\d+)
+
+
+Postfija:
+
+<Expresion> -> <Expresion> <Expresion> +
+    | <Expresion> <Expresion> -
+    | <Expresion> <Expresion> *
+    | <Expresion> <Expresion> /
+    | <Numero>
+
+<Numero> -> regex(\d+)
