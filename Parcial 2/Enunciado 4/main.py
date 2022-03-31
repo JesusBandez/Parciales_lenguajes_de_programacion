@@ -36,16 +36,33 @@ test_tail_recursion_f = partial(measure_time, recursive_f)
 test_iterative_f = partial(measure_time, iterative_f)
 
 # Casos prueba y listas para guardarlos
-test_cases = [i for i in range(100, 201, 50)]
+test_cases = [i for i in range(1, 100)]
 test_sol_normal_f = []
 test_sol_tail_recursion_f = []
 test_sol_iterative_f = []
 
+# Se ejecutan las pruebas 
 for test_case in test_cases:
+    print('fnormal:')
     test_sol_normal_f.append(test_normal_f(test_case))
-    test_sol_tail_recursion_f.append(test_tail_recursion_f(test_case))
-    test_sol_iterative_f.append(test_iterative_f(test_case))
+    print(test_sol_normal_f[-1])
 
+    print('tail_recursion:')
+    test_sol_tail_recursion_f.append(test_tail_recursion_f(test_case))
+    print(test_sol_tail_recursion_f[-1])
+
+    print('f_iterative:')
+    test_sol_iterative_f.append(test_iterative_f(test_case))
+    print(test_sol_iterative_f[-1])
+
+print('Final:')
+print('fnormal:')
 print(test_sol_normal_f)
+
+print('tail_recursion:')
 print(test_sol_tail_recursion_f)
+
+print('f_iterative:')
 print(test_sol_iterative_f)
+
+
