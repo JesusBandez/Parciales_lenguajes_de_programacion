@@ -1,5 +1,7 @@
+"""Autor: Jesus Bandez 17-10046
+Reglas para conseguir los tokens
+"""
 
-import re
 
 from ply.lex import LexToken
 

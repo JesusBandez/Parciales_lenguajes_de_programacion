@@ -1,7 +1,7 @@
-"""Clase que implementa la Virtual Machine encargada de hacer las traducciones 
+"""Autor: Jesus Bandez 17-10046
+Clase que implementa la Virtual Machine encargada de hacer las traducciones 
     y evaluaciones"""
 
-import math
 import ply.lex as lex
 import src.tokenrules
 import src.AST

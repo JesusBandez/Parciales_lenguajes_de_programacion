@@ -1,8 +1,9 @@
 """Autor: Jesus Bandez. 1710046
-Modulo que implementa la clase 'Client' que interactua con la clase 'VM'"""
+Modulo que implementa la clase 'Client' que interactua con la clase 'VM'
+Client recibe los comandos y los prepara, la VM se encarga de ejecutar las
+operaciones"""
 
 
-from http import client
 import re
 from src.VM import VM
 
@@ -10,6 +11,8 @@ class Client(object):
 
     def __init__(self):
         """Clase que permite interactuar con la VM por medio de sus comandos"""
+        print("Bienvenido al manejador de expresiones aritmeticas en orden prefijo o postfijo\n"
+        "Comandos validos:\nEVAL <orden> <expr>\nMOSTRAR <orden> <expr>\nSALIR")
         self.VM = VM()
 
 

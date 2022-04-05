@@ -1,3 +1,7 @@
+"""Autor: Jesus Bandez 17-10046
+Modulo con la gramatica usada para las expresiones prefijas"""
+
+
 from . import AST
 from .tokenrules import tokens
 # -------- REGLAS DE PRECEDENCIA --------
