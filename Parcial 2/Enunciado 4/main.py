@@ -9,6 +9,8 @@ alfa = ((0 + 4) mod 5) + 3 = 7
 beta = ((4 + 6) mod 5) + 3 = 3
  
 """
+import sys
+sys.setrecursionlimit(1000000000)
 from functools import partial
 from time import time
 from lib.function_F import f
@@ -36,33 +38,23 @@ test_tail_recursion_f = partial(measure_time, recursive_f)
 test_iterative_f = partial(measure_time, iterative_f)
 
 # Casos prueba y listas para guardarlos
-test_cases = [i for i in range(1, 100)]
+test_cases = [i for i in range(21, 2000, 10)]
 test_sol_normal_f = []
 test_sol_tail_recursion_f = []
 test_sol_iterative_f = []
 
 # Se ejecutan las pruebas 
 for test_case in test_cases:
-    print('fnormal:')
-    test_sol_normal_f.append(test_normal_f(test_case))
+    print(f'n:= {test_case}\n')
+    print('Tiempo fnormal: (sg)')
+    test_sol_normal_f.append(test_normal_f(test_case)[1])
     print(test_sol_normal_f[-1])
 
-    print('tail_recursion:')
-    test_sol_tail_recursion_f.append(test_tail_recursion_f(test_case))
+    print('Tiempo tail_recursion: (sg)')
+    test_sol_tail_recursion_f.append(test_tail_recursion_f(test_case)[1])
     print(test_sol_tail_recursion_f[-1])
 
-    print('f_iterative:')
-    test_sol_iterative_f.append(test_iterative_f(test_case))
+    print('Tiempo f_iterative: (sg)')
+    test_sol_iterative_f.append(test_iterative_f(test_case)[1])
     print(test_sol_iterative_f[-1])
-
-print('Final:')
-print('fnormal:')
-print(test_sol_normal_f)
-
-print('tail_recursion:')
-print(test_sol_tail_recursion_f)
-
-print('f_iterative:')
-print(test_sol_iterative_f)
-
-
+    print()
