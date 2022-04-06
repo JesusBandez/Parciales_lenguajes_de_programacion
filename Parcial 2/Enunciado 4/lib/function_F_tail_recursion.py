@@ -5,8 +5,7 @@
    La estrategia de esta version consiste en "voltear" la forma en que se
    calculan los valores de la funcion. En vez de empezar en el valor 'n' y
    'bajar' para calcularlo segun los valores bases, se inicia en los 
-   valores bases y se va 'subiendo' calculando los siguientes n+1 con los 
-   casos bases.
+   valores bases y se va 'subiendo' desde un caso base hasta n
    """
 
 
@@ -26,7 +25,7 @@ def f_aux(n:int, x:list, c:int) -> int:
     Para calcular f(n) se procede a calcular f(20), se guarda el valor en la ultima
     posicion de la lista x, y luego se hace una llamada recursiva para calcular 
     el valor de f(21). Los valores necesarios para obtener el valor de funcion f(c)
-    se mantienen en la lista x. Cuando n == c+1, se consigue el valor f(n)
+    se mantienen en la lista x. Cuando n == c+1, se consigue que f(n) == f(c+1)
     """
 
     # Caso base de la recursion

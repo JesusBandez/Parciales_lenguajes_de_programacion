@@ -2,7 +2,7 @@
 Conversion a iterativa de la funcion f dada en el enunciado"""
 
 def f(n:int) -> int:
-    # Se los valores de c y de la lista x.
+    # Se inicializan los valores de c y de la lista x.
     # Esto corresponde a la llamada inicial de la funcion f_aux en
     # la version iterativa de cola
     c = 20
@@ -14,7 +14,7 @@ def f(n:int) -> int:
         return n
 
     # Componente del caso recursivo:
-    # Mientras n no sea n + 1
+    # Mientras n no sea c + 1
     while n != c+1:    
         # Se obtiene el valor de la f evaluada en c y se guarda en
         # la ultima posicion de la lista x
@@ -24,7 +24,7 @@ def f(n:int) -> int:
 
         c += 1
 
-    # Como c+1 == n, se tiene que f(c+1) = f(n). Por tanto, se
+    # Cuando c+1 == n, se tiene que f(c+1) = f(n). Por tanto, se
     # hace el ultimo calculo y se retorna el valor buscado
     return sum_list(x)
 
