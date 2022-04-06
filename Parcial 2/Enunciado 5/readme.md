@@ -1,6 +1,6 @@
 # Codigos del Enunciado 5
 
-Estos codigos corresponde al manjeador de memoria para tipos atomicos, registros y arreglos.
+Estos codigos corresponde al manejador de memoria para tipos atómicos, registros y arreglos.
 
 Este manejador recibe tipos y describe cuanto ocupan en memoria y cuanta desperdician segun
 la forma en que el lenguaje guarda los registros.
