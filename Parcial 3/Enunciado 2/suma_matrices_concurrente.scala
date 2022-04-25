@@ -1,12 +1,19 @@
+// Autor: Jesus Bandez 17-10046,
+// Modulo escrito en Scala que contiene la suma de matrices de manera concurrente.
+// Nota: Si por alguna razon el primer print no muestra un "Future(<not completed>)"
+// incremente el tamanio de las matrices a y b. 
+// Esto puede pasar si su procesador es los suficientemente potente para calcular
+// la suma antes de que se ejecute el primer "println(k)"
+
 import scala.concurrent._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.util.{Failure, Success}
 
-object Hello{
+object Suma_de_matrices{
     def main(args: Array[String]): Unit = {
-        // Se crean las matrices a sumar
-        
+
+        // Se crean las matrices a sumar        
         var a = Array(Array(1.0, 2.0, 3.0, 1.0, 2.0, 3.0), 
                       Array(1.0, 2.0, 3.0, 1.0, 2.0, 3.0),
                       Array(1.0, 2.0, 3.0, 1.0, 2.0, 3.0),
@@ -30,10 +37,10 @@ object Hello{
         println()
 
         // Se detiene este thread hasta que se obtenga el valor de la 
-        // suma por concurrencia o pasen 2 segundos
+        // suma por concurrencia o pasen 99 segundos
         print("El programa se detiene hasta obtener el valor de k")
         println(" resultado de la funcion concurrente\n")
-        var resultado = Await.result(k, 10 seconds)
+        var resultado = Await.result(k, 99 seconds)
 
         println("Ahora se vuelve a pedir el valor de k:")
         print("k = ")
@@ -44,6 +51,9 @@ object Hello{
         print("K=\n")
         imprimir_matriz(resultado)
     }
+
+    // Funcion para sumar dos matrices de manera concurrente. Arroja exception si las matrices
+    // no tienen dimensiones iguales
     def sumar_matrices(a: Array[Array[Double]], b: Array[Array[Double]]) = {
         if (a.length != b.length) {
             throw new Exception("Matrices de tamanios distintos no se pueden sumar")
@@ -74,6 +84,7 @@ object Hello{
         c
     }
 
+    // Funcion que imprime una matriz
     def imprimir_matriz(a: Array[Array[Double]]) = {
         for (i <- 0 until a.length) {
             for (j <- 0 until a(0).length){
