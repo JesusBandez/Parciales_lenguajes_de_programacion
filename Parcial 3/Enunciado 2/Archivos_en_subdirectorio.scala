@@ -20,11 +20,13 @@ object Archivos_en_subdirectorio {
         var futura_cantidad_de_archivos = contar_archivos_en_arbol_subdirectorio(".")
         println(s"$futura_cantidad_de_archivos\n")
         
-
+        // Se espera a que el hilo termine de calcular o que pasen 120 sg
         println("Ahora se espera a que todos los hilos terminen de calcular en los subdirectorios")
-        var cantidad_de_archivos = Await.result(futura_cantidad_de_archivos, 60 seconds)
+        var cantidad_de_archivos = Await.result(futura_cantidad_de_archivos, 120 seconds)
 
-        println("Se imprime la cantidad de archivos conseguidos:")
+        println(s"Se vuelve a imprimir el valor:\n$futura_cantidad_de_archivos\n")
+
+        println("Y ahora se imprime la cantidad de archivos conseguidos:")
         println(s"$cantidad_de_archivos archivos conseguidos." )
      }
 
