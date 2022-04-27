@@ -1,4 +1,4 @@
-# Códigos del Enunciado 2
+# Códigos del Enunciado 1
 
 Codigos de los programas que contienen las implementaciones de las clases Coleccion
 y Grafos en Kotlin.
